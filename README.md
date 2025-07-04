@@ -115,7 +115,7 @@ Exploring the full Potential of Excel as a tool for Data Analysis with this proj
   - KPI Custom formatting: #,##0,,,"b"
 
 
-  ## 10: What is the number of unique products per price range bucket? (e.g., <₹200, ₹200–₹500, >₹500)?
+  ## 10: What is the number of unique products per price range bucket? 
 ![image](https://github.com/user-attachments/assets/3215076a-2f78-47b4-9030-cddbba84a65f)
 
   - Calculated Column: =IF(D2<200,"<$200",IF(D2<=500,"$200-$500",IF(D2<10000,"<$10000",">$10000")))
