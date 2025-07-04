@@ -36,129 +36,129 @@ Exploring the full Potential of Excel as a tool for Data Analysis with this proj
   ##  1:  What is the average discount percentage by product category?
 ![Amazon Product Analysis 1_DSA](https://github.com/user-attachments/assets/2187eac5-5ef7-481e-ad7d-7ad8ce459c59)
 
-Used a Pivot Table
-Rows: Product Category
-Values: Average of Discount %
+  - Used a Pivot Table:
+  - Rows: Product Category
+  - Values: Average of Discount %
 
 
   ## 2: How many products are listed under each category?
 ![image](https://github.com/user-attachments/assets/9b508d0a-98d5-4c2e-98e4-c10a432ea255)
 
-Used a Pivot Table
-Rows: Product Category
-Values: Count of Product Name
+  - Used a Pivot Table:
+  - Rows: Product Category
+  - Values: Count of Product Name
 
 
   ## 3: What is the total number of reviews per category?
 ![image](https://github.com/user-attachments/assets/c4991e8f-988c-478d-a5d4-f4abef6ad009)
 
-Used a Pivot Table
-Rows: Product Category
-Values: Sum of Rating Count
+  - Used a Pivot Table:
+  - Rows: Product Category
+  - Values: Sum of Rating Count
 
 
   ## 4: Which products have the highest average ratings?
 ![image](https://github.com/user-attachments/assets/38b49ff8-67cd-47ea-ae06-442ae6fac434)
 
-Used a Pivot Table
-Rows: Product Name
-Values: Average of Rating
-Sort: Descending by Average Rating
-Filter: Leaving Top 3 with same Average rating
+  - Used a Pivot Table:
+  - Rows: Product Name
+  - Values: Average of Rating
+  - Sort: Descending by Average Rating
+  - Filter: Leaving Top 3 with same Average rating
 
 
   ## 5: What is the average actual price vs the discounted price by category?
 ![image](https://github.com/user-attachments/assets/0feea446-a6b2-4588-8449-9c7358333962)
 
-Used a Pivot Table
-Rows: Product Category
-Values: Average of Actual Price, Average of Discounted price
-Sort: Descending by Average Rating
+  - Used a Pivot Table:
+  - Rows: Product Category
+  - Values: Average of Actual Price, Average of Discounted price
+  - Sort: Descending by Average Rating
 
 
   ## 6: Which products have the highest number of reviews?
 ![image](https://github.com/user-attachments/assets/4a27924d-c3e9-47b0-b525-b925d8db97c9)
 
-Used a Pivot Table
-Rows: Product Name
-Values: Sum of Rating Count
-Sort: Descending by Rating Count
-KPI Custom formatting: #,##0,,,"m"
+  - Used a Pivot Table:
+  - Rows: Product Name
+  - Values: Sum of Rating Count
+  - Sort: Descending by Rating Count
+  - KPI Custom formatting: #,##0,,,"m"
 
 
   ## 7: How many products have a discount of 50% or more?
 
-Used a calculated column to get 662
-Function: =IF(Discount%>=50%, "1","0")
-Used a Pivot Table
-Rows: Product Name
-Values: Sum of Helper Column
+  -  Used a calculated column to get 662
+  - Function: =IF(Discount%>=50%, "1","0")
+  - Used a Pivot Table
+  - Rows: Product Name
+  - Values: Sum of Helper Column
 
 
   ## 8: What is the distribution of product ratings (e.g., how many products are rated 3.0, 4.0, etc.)?
 
 ![image](https://github.com/user-attachments/assets/21b82416-176c-452e-92d8-144dee9ae93c)
 
-Used a Pivot Table
-Rows: Rating
-Values:Count of Product ID
+  - Used a Pivot Table
+  - Rows: Rating
+  - Values:Count of Product ID
 
 
   ## 9: What is the total potential revenue (actual_price × rating_count) by category?
 ![image](https://github.com/user-attachments/assets/e3aeec92-dcff-4c77-a662-46f9325b26b1)
 
-Calculated Column Function to get Total Potential Revenue:
-=[@[Actual Price]]*[@[Rating Count]
-Pivot Table:
-Rows: Product Category
-Values: Sum of Total Revenue
-KPI Custom formatting: #,##0,,,"b"
+  - Calculated Column Function to get Total Potential Revenue:
+    =[@[Actual Price]]*[@[Rating Count]
+  - Pivot Table:
+  - Rows: Product Category
+  - Values: Sum of Total Revenue
+  - KPI Custom formatting: #,##0,,,"b"
 
 
   ## 10: What is the number of unique products per price range bucket? (e.g., <₹200, ₹200–₹500, >₹500)?
 ![image](https://github.com/user-attachments/assets/3215076a-2f78-47b4-9030-cddbba84a65f)
 
-Calculated Column: =IF(D2<200,"<$200",IF(D2<=500,"$200-$500",IF(D2<10000,"<$10000",">$10000")))
-Pivot Table:
-Rows: Price Range Bucket
-Values: Count of Product Name
+  - Calculated Column: =IF(D2<200,"<$200",IF(D2<=500,"$200-$500",IF(D2<10000,"<$10000",">$10000")))
+  - Pivot Table:
+  - Rows: Price Range Bucket
+  - Values: Count of Product Name
 
 
   ## 11: How does the rating relate to the level of discount?
 ![image](https://github.com/user-attachments/assets/3967f100-aac8-443e-923f-77cc465dd537)
 
-Pivot Table:
-Rows: Discount %
-Values: Average Rating
+  - Pivot Table:
+  - Rows: Discount %
+  - Values: Average Rating
   - The chart highlights the trend of average rating across discounts ranges.
 
 
 ## 12: How many products have fewer than 1,000 reviews?
 ![image](https://github.com/user-attachments/assets/3779e237-4527-4d24-9b10-01cd027f0815)
 
-Pivot Table: 
-Rows: Rating Count (Group function 0-999)
-Values: Count of product ID
+  - Pivot Table: 
+  - Rows: Rating Count (Group function 0-999)
+  - Values: Count of product ID
 
 
   ## 13: Which categories have products with the highest discounts?
 ![image](https://github.com/user-attachments/assets/fde5765d-7e59-4edc-9175-f1cf1d989b13)
   
-Pivot Table: 
-Rows: Product Category
-Values: Max of Discount%
+  - Pivot Table: 
+  - Rows: Product Category
+  - Values: Max of Discount%
 
 
   ## 14: Identify the top 5 products in terms of rating and number of reviews combined.
 ![image](https://github.com/user-attachments/assets/2f00b492-7697-4134-97c7-a7b774fd5592)
 
-Created a calculated column
-Formula: =([@[Rating]]*[@[Rating Count]])
-Pivot Table: 
-Rows: Product Name
-Values: Sum of Score
-Filter: Top 5
-Sort: Descending
+  - Created a calculated column
+    - Formula: =([@[Rating]]*[@[Rating Count]])
+  - Pivot Table: 
+  - Rows: Product Name
+  - Values: Sum of Score
+  - Filter: Top 5
+  - Sort: Descending
 
 
 # Dashboard Features
@@ -173,7 +173,7 @@ Sort: Descending
   - Customers feedback concerning the other products in less demand should be highly encouraged and addressed accordingly.
   - More stretegic campaigns of products upon new release should be in place to create awareness of products with less ratings or reviews.
     
-The Dashboard below contains the charts derived from the pivot tables.
+  - The Dashboard below contains the charts derived from the pivot tables.
 
 ![Amazon Product Analysis_DSA](https://github.com/user-attachments/assets/548c5b0a-f5df-45ac-bedd-7df2dcf86d7d)
 
